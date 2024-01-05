@@ -1,0 +1,7 @@
+# Install buildkit
+RUN git clone https://github.com/civicrm/civicrm-buildkit.git /opt/buildkit
+ENV PATH="/opt/buildkit/bin:${PATH}"
+ENV AMPHOME="/var/www/html/.amp"
+COPY ./civibuild.conf /opt/buildkit/app/civibuild.conf
+RUN civi-download-tools
+RUN civibuild cache-warmup
