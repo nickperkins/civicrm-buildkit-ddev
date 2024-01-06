@@ -1,6 +1,9 @@
 # CiviCRM Buildkit with DDEV
 
-This project provides a DDEV-based environment for working with [CiviCRM Buildkit](https://github.com/civicrm/civicrm-buildkit).
+This project provides a [DDEV](https://ddev.com)-based environment for working with [CiviCRM Buildkit](https://github.com/civicrm/civicrm-buildkit).
+
+## Prerequisites 
+* [DDEV](https://ddev.com)
 
 ## Getting Started
 
