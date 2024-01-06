@@ -29,8 +29,8 @@
 /providers/upsun.yaml
 /sequelpro.spf
 /settings/settings.ddev.py
-/traefik/config/civicrm-test.yaml
-/traefik/certs/civicrm-test.crt
-/traefik/certs/civicrm-test.key
+/traefik/config/civicrm-buildkit-ddev.yaml
+/traefik/certs/civicrm-buildkit-ddev.crt
+/traefik/certs/civicrm-buildkit-ddev.key
 /xhprof/xhprof_prepend.php
 /**/README.*
