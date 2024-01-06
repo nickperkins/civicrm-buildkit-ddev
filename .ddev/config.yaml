@@ -1,4 +1,4 @@
-name: civicrm-test
+name: civicrm-buildkit-ddev
 type: php
 docroot: ""
 php_version: "8.1"
