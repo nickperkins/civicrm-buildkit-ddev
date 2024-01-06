@@ -1,5 +1,3 @@
-/.amp/
+/.amp/*
 !/.amp/services.yml
 /build/*
-!/build/.amp
-!/build/index.html

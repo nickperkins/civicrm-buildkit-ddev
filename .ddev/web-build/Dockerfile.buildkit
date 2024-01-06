@@ -3,9 +3,7 @@ USER $username
 RUN git clone https://github.com/civicrm/civicrm-buildkit.git /home/$username/buildkit
 WORKDIR /home/$username/buildkit
 ENV AMPHOME="/var/www/html/.amp"
-RUN mkdir .composer && \
-    mkdir .drush && \
-    mkdir .npm
+ENV APACHE24_VHOST_TPL="/var/www/html/.ddev/apache/apache24-vhost.php"
 ENV COMPOSER_CACHE_DIR=/dev/null
 RUN /home/$username/buildkit/bin/civi-download-tools
 RUN /home/$username/buildkit/bin/civibuild cache-warmup
