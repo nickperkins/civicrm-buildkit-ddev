@@ -1,7 +1,13 @@
 # Install buildkit
-RUN git clone https://github.com/civicrm/civicrm-buildkit.git /opt/buildkit
-ENV PATH="/opt/buildkit/bin:${PATH}"
+USER $username
+RUN git clone https://github.com/civicrm/civicrm-buildkit.git /home/$username/buildkit
+WORKDIR /home/$username/buildkit
 ENV AMPHOME="/var/www/html/.amp"
-COPY ./civibuild.conf /opt/buildkit/app/civibuild.conf
-RUN civi-download-tools
-RUN civibuild cache-warmup
+RUN mkdir .composer && \
+    mkdir .drush && \
+    mkdir .npm
+ENV COMPOSER_CACHE_DIR=/dev/null
+RUN /home/$username/buildkit/bin/civi-download-tools
+RUN /home/$username/buildkit/bin/civibuild cache-warmup
+COPY ./civibuild.conf /home/$username/buildkit/app/civibuild.conf
+USER root
